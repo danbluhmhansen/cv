@@ -2,27 +2,70 @@
 
 <section class="section">
     <div class="container">
-        <h1 class="title">
-            Title
-        </h1>
+        <div class="columns" style="margin-bottom: -0.75rem;">
+            <div class="column">
+                <h1 class="title">Steven N Dubois</h1>
+            </div>
+            <div class="column is-narrow">
+                <div class="dropdown is-right @languageDropDownActiveClass">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" @onclick="ToggleLanguageDropDown">
+                            <figure class="image" style="width: 40px;height: 30px;">
+                                <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/gb.svg" />
+                            </figure>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu" style="min-width: 0rem;">
+                        <div class="dropdown-content py-0">
+                            <a class="dropdown-item">
+                                <figure class="image" style="width: 40px;height: 30px;">
+                                    <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/gb.svg" />
+                                </figure>
+                            </a>
+                            <a class="dropdown-item">
+                                <figure class="image" style="width: 40px;height: 30px;">
+                                    <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/dk.svg" />
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <hr />
         <div class="columns">
             <div class="column is-one-quarter">
-                <article class="panel is-primary">
-                    <p class="panel-heading">
-                        Panel heading
-                    </p>
-                    <div class="panel-block">
+                <div class="card">
+                    <header class="card-header has-background-primary">
+                        <p class="card-header-title has-text-white">Info</p>
+                    </header>
+                    <div class="card-image">
                         <figure class="image is-258x258">
                             <img src="https://pngimg.com/uploads/cat/cat_PNG50498.png" />
                         </figure>
                     </div>
-                    <div class="panel-block">
-                        <p>
-                            Mollis euismod congue sociosqu, vulputate lobortis orci, etiam curabitur purus condimentum varius primis. Rhoncus scelerisque consectetur, imperdiet lobortis vestibulum venenatis nec. Aenean ut vulputate suscipit, elit elementum mollis felis ante. Est porta tristique, ultricies dolor euismod adipiscing inceptos. Consequat malesuada tortor, suscipit semper, viverra eleifend faucibus elit etiam ad. Amet posuere ipsum, vel phasellus, convallis mi accumsan massa litora. Sagittis libero dictum, torquent odio, litora etiam a pharetra in. Habitasse feugiat congue, class eros, suscipit pellentesque commodo fusce est tristique. In ad enim, vulputate curae litora magna.
-                        </p>
+                    <div class="card-content">
+                        <div class="field">
+                            <label class="label"><span class="icon"><i class="fas fa-phone"></i></span> Phone</label>
+                            <p>317-975-8953</p>
+                        </div>
+                        <div class="field">
+                            <label class="label"><span class="icon"><i class="fas fa-envelope"></i></span> E-mail</label>
+                            <p>steven_n_dubois@gmail.com</p>
+                        </div>
+                        <div class="field">
+                            <label class="label"><span class="icon"><i class="fas fa-road"></i></span> Street</label>
+                            <p>884 Crestview Manor</p>
+                        </div>
+                        <div class="field">
+                            <label class="label"><span class="icon"><i class="fas fa-city"></i></span> City</label>
+                            <p>46032, Carmel</p>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
             <div class="column">
                 <div class="block">
