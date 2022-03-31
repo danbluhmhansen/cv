@@ -1,5 +1,9 @@
 using System.Globalization;
 
+using Blazorise;
+using Blazorise.Bulma;
+using Blazorise.Icons.FontAwesome;
+
 using Cv;
 
 using Microsoft.AspNetCore.Components.Web;
@@ -12,6 +16,11 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddLocalization();
+
+builder.Services
+    .AddBlazorise()
+    .AddBulmaProviders()
+    .AddFontAwesomeIcons();
 
 var host = builder.Build();
 
