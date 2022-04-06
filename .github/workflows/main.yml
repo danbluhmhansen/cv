@@ -19,7 +19,7 @@ jobs:
         run: dotnet publish -c Release -o publish --nologo
       # changes the base-tag in index.html from '/' to 'https://danbluhmhansen.github.io/cv/' to match GitHub Pages repository subdirectory
       - name: Change base-tag in index.html from / to https://danbluhmhansen.github.io/cv/
-        run: sed -i 's/<base href="\/" \/>/<base href="\/https://danbluhmhansen.github.io/cv/\/" \/>/g' publish/wwwroot/index.html
+        run: sed -i 's/<base href="\/" \/>/<base href="\/https:\/\/danbluhmhansen.github.io\/cv\/" \/>/g' publish/wwwroot/index.html
       # copy index.html to 404.html to serve the same file when a file is not found
       - name: copy index.html to 404.html
         run: cp release/wwwroot/index.html release/wwwroot/404.html
@@ -31,5 +31,3 @@ jobs:
         with:
           branch: gh-pages
           folder: publish/wwwroot
-
-          
