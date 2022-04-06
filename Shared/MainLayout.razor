@@ -1,3 +1,44 @@
 ﻿@inherits LayoutComponentBase
 
-@Body
+<Layout>
+    <LayoutHeader>
+        <Bar Breakpoint="Breakpoint.Desktop"
+            Background="Background.Light"
+            ThemeContrast="ThemeContrast.Light">
+            <BarToggler />
+            <BarMenu>
+                <BarStart>
+                    <BarItem>
+                        <BarLink To="#home">Home</BarLink>
+                    </BarItem>
+                    <BarItem>
+                        <BarLink To="#docs">Documentation</BarLink>
+                    </BarItem>
+                </BarStart>
+                <BarEnd>
+                    <CulturePicker />
+                </BarEnd>
+            </BarMenu>
+        </Bar>
+    </LayoutHeader>
+    <LayoutContent>
+        <Container Margin="Margin.Is4.OnY">
+            @Body
+        </Container>
+    </LayoutContent>
+    <LayoutFooter>
+        <Bar Breakpoint="Breakpoint.Desktop"
+            Background="Background.Light"
+            ThemeContrast="ThemeContrast.Light">
+            <BarMenu>
+                <BarStart>
+                    <BarItem>
+                        Footer
+                    </BarItem>
+                </BarStart>
+                <BarEnd>
+                </BarEnd>
+            </BarMenu>
+        </Bar>
+    </LayoutFooter>
+</Layout>

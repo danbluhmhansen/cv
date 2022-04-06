@@ -1,5 +1,9 @@
 using System.Globalization;
 
+using Blazorise;
+using Blazorise.Bulma;
+using Blazorise.Icons.FontAwesome;
+
 using Cv;
 
 using Microsoft.AspNetCore.Components.Web;
@@ -11,7 +15,12 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddLocalization();
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+builder.Services
+    .AddBlazorise()
+    .AddBulmaProviders()
+    .AddFontAwesomeIcons();
 
 var host = builder.Build();
 
@@ -20,7 +29,9 @@ var result = await js.InvokeAsync<string>("blazorCulture.get");
 
 CultureInfo culture;
 if (result is not null)
+{
     culture = new CultureInfo(result);
+}
 else
 {
     culture = new CultureInfo("en-UK");
