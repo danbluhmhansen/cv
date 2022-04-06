@@ -16,6 +16,12 @@ public partial class CulturePicker : ComponentBase
         new CultureInfo("da-DK"),
     };
 
+    private string[] cultureImages = new[]
+    {
+        "https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/gb.svg",
+        "https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/dk.svg",
+    };
+
     private CultureInfo Culture
     {
         get => CultureInfo.CurrentCulture;
@@ -30,4 +36,11 @@ public partial class CulturePicker : ComponentBase
             }
         }
     }
+
+    private string CurrentCultureImage() => CultureInfo.CurrentCulture.Name == "en-UK"
+        ? this.cultureImages[0]
+        : this.cultureImages[1];
+
+    private void SetCultureEn() => this.Culture = this.supportedCultures[0];
+    private void SetCultureDa() => this.Culture = this.supportedCultures[1];
 }

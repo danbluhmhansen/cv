@@ -15,7 +15,7 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddLocalization();
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 builder.Services
     .AddBlazorise()
@@ -29,7 +29,9 @@ var result = await js.InvokeAsync<string>("blazorCulture.get");
 
 CultureInfo culture;
 if (result is not null)
+{
     culture = new CultureInfo(result);
+}
 else
 {
     culture = new CultureInfo("en-UK");

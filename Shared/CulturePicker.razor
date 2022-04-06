@@ -1,10 +1,22 @@
-<p>
-    <label>
-        <select @bind="Culture">
-            @foreach (var culture in supportedCultures)
-            {
-                <option value="@culture">@culture.DisplayName</option>
-            }
-        </select>
-    </label>
-</p>
+<BarItem>
+    <BarDropdown RightAligned>
+        <BarDropdownToggle>
+            <Figure Style="width:32px;height:24px;">
+                <FigureImage Source="@CurrentCultureImage()" />
+            </Figure>
+        </BarDropdownToggle>
+        <BarDropdownMenu>
+            <BarDropdownItem Clicked="SetCultureEn">
+                <Figure Style="width:32px;height:24px;">
+                    <FigureImage Source="@cultureImages[0]" />
+                </Figure>
+            </BarDropdownItem>
+            <BarDropdownDivider />
+            <BarDropdownItem Clicked="SetCultureDa">
+                <Figure Style="width:32px;height:24px;">
+                    <FigureImage Source="@cultureImages[1]" />
+                </Figure>
+            </BarDropdownItem>
+        </BarDropdownMenu>
+    </BarDropdown>
+</BarItem>

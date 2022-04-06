@@ -1,61 +1,32 @@
 ﻿@page "/"
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Index> Localizer
 
+<Row><Column><Heading Size="HeadingSize.Is1">Title</Heading></Column></Row>
 <Row>
-    <Column>
-        <Heading Size="HeadingSize.Is1">Title</Heading>
-    </Column>
-    <Column>
-        <Dropdown>
-            <DropdownToggle>
-                <Figure Size="FigureSize.Is32x32">
-                    <FigureImage Source="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/gb.svg" />
-                </Figure>
-            </DropdownToggle>
-            <DropdownMenu>
-                <DropdownItem>
-                    <Figure Size="FigureSize.Is32x32">
-                        <FigureImage 
-                            Source="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/gb.svg" />
-                    </Figure>
-                </DropdownItem>
-                <DropdownDivider />
-                <DropdownItem>
-                    <Figure Size="FigureSize.Is32x32">
-                        <FigureImage 
-                            Source="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/dk.svg" />
-                    </Figure>
-                </DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
-    </Column>
-</Row>
-<Row>
-    <Column>
+    <Column ColumnSize="ColumnSize.Is3">
         <Card>
             <CardImage Source="https://pngimg.com/uploads/cat/cat_PNG50498.png" Alt="Card image cap 3" />
             <CardBody>
                 <CardTitle Size="5">Card title 1</CardTitle>
                 <CardText>
-                    This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                    @Localizer["CardText"]
                 </CardText>
             </CardBody>
         </Card>
     </Column>
     <Column>
-    <Paragraph Margin="Margin.Is2.FromBottom">
-        Aliquam ullamcorper aliquet, varius elit, curabitur fusce interdum nullam quisque velit orci. Adipiscing in curabitur habitant, taciti sem lacus, urna tempor odio molestie libero tincidunt. Ante aenean nibh, convallis nec, luctus sed dolor per ipsum aliquam. Aenean blandit, maecenas luctus himenaeos metus. Felis ut elit, tincidunt platea, ligula sapien feugiat nunc ornare faucibus erat. Vivamus ad, feugiat sagittis metus mauris.
-    </Paragraph>
-    <Paragraph Margin="Margin.Is2.FromBottom">
-        Lobortis dapibus in ac, lorem sociosqu felis, ad mollis senectus ligula quisque luctus. Ultricies volutpat etiam ligula, nostra donec senectus aenean sociosqu. Nisi scelerisque eleifend mi, condimentum semper tristique odio aliquam. Curabitur euismod torquent, primis nulla consectetur tellus facilisis. Nullam curabitur semper libero, purus felis viverra tempor ac. Ullamcorper urna posuere consectetur, sed aenean habitasse, pellentesque curabitur at luctus vehicula volutpat fermentum euismod. Elementum velit, litora malesuada nulla habitasse. Quam cursus, sapien augue justo quisque.
-    </Paragraph>
-    <Paragraph Margin="Margin.Is2.FromBottom">
-        Sodales elit himenaeos, magna vehicula, augue sit nunc laoreet curae commodo. Justo augue, proin dui sit. Suspendisse condimentum nibh habitasse, ipsum donec hendrerit, sodales cubilia libero justo nec pretium eu ornare. Nunc vitae felis, id amet curabitur a integer. Lacus tristique inceptos iaculis, ad nam nunc, mattis ut lorem litora per rutrum dui. Morbi integer primis, volutpat curabitur fringilla auctor. Ultricies mattis molestie, quisque volutpat, semper ullamcorper curae bibendum velit sodales. Metus enim luctus rhoncus, amet lobortis elit, augue lacus blandit in posuere curae. Semper quam, nulla est urna.
-    </Paragraph>
-    <Paragraph Margin="Margin.Is2.FromBottom">
-        Vitae sollicitudin rutrum, diam mollis, lorem pellentesque curae litora integer tristique varius. Nisl nam aptent, dolor nullam rhoncus vel curabitur. Primis tincidunt elementum lobortis, porta volutpat curabitur, sagittis dictumst suspendisse imperdiet donec auctor. Molestie quisque ut, felis tortor, aenean nulla sollicitudin lobortis lacinia donec. A nullam eget sed, taciti felis fringilla, per quisque convallis tellus quisque tempor proin. Lectus aliquam semper tincidunt, malesuada ultricies tristique pellentesque ut.
-    </Paragraph>
-    <Paragraph Margin="Margin.Is2.FromBottom">
-        Ut habitant, commodo blandit viverra mollis. Lorem ipsum ullamcorper, a sit velit duis conubia. Interdum vulputate et, nec faucibus, potenti purus eu cursus leo ad placerat. Litora vestibulum feugiat venenatis, lorem risus porta, quis porttitor netus dictumst libero congue ipsum duis. Adipiscing venenatis nec, nostra hendrerit mi maecenas aliquet. Porttitor posuere libero facilisis, tempus laoreet erat mi quisque. Donec ornare suscipit est, convallis lobortis praesent, purus imperdiet ut per varius metus eu euismod. Conubia platea lacus, sollicitudin dapibus congue vehicula. Vestibulum scelerisque lorem, suscipit venenatis, pharetra in tempus tellus curae porta metus.
-    </Paragraph>
+        <Paragraph Margin="Margin.Is2.FromBottom">
+            Aliquam ullamcorper aliquet, varius elit, curabitur fusce interdum nullam quisque velit orci. Adipiscing in curabitur habitant, taciti sem lacus, urna tempor odio molestie libero tincidunt. Ante aenean nibh, convallis nec, luctus sed dolor per ipsum aliquam. Aenean blandit, maecenas luctus himenaeos metus. Felis ut elit, tincidunt platea, ligula sapien feugiat nunc ornare faucibus erat. Vivamus ad, feugiat sagittis metus mauris.
+        </Paragraph>
+        <Paragraph Margin="Margin.Is2.FromBottom">
+            Lobortis dapibus in ac, lorem sociosqu felis, ad mollis senectus ligula quisque luctus. Ultricies volutpat etiam ligula, nostra donec senectus aenean sociosqu. Nisi scelerisque eleifend mi, condimentum semper tristique odio aliquam. Curabitur euismod torquent, primis nulla consectetur tellus facilisis. Nullam curabitur semper libero, purus felis viverra tempor ac. Ullamcorper urna posuere consectetur, sed aenean habitasse, pellentesque curabitur at luctus vehicula volutpat fermentum euismod. Elementum velit, litora malesuada nulla habitasse. Quam cursus, sapien augue justo quisque.
+        </Paragraph>
+        <Paragraph Margin="Margin.Is2.FromBottom">
+            Sodales elit himenaeos, magna vehicula, augue sit nunc laoreet curae commodo. Justo augue, proin dui sit. Suspendisse condimentum nibh habitasse, ipsum donec hendrerit, sodales cubilia libero justo nec pretium eu ornare. Nunc vitae felis, id amet curabitur a integer. Lacus tristique inceptos iaculis, ad nam nunc, mattis ut lorem litora per rutrum dui. Morbi integer primis, volutpat curabitur fringilla auctor. Ultricies mattis molestie, quisque volutpat, semper ullamcorper curae bibendum velit sodales. Metus enim luctus rhoncus, amet lobortis elit, augue lacus blandit in posuere curae. Semper quam, nulla est urna.
+        </Paragraph>
+        <Paragraph Margin="Margin.Is2.FromBottom">
+            Vitae sollicitudin rutrum, diam mollis, lorem pellentesque curae litora integer tristique varius. Nisl nam aptent, dolor nullam rhoncus vel curabitur. Primis tincidunt elementum lobortis, porta volutpat curabitur, sagittis dictumst suspendisse imperdiet donec auctor. Molestie quisque ut, felis tortor, aenean nulla sollicitudin lobortis lacinia donec. A nullam eget sed, taciti felis fringilla, per quisque convallis tellus quisque tempor proin. Lectus aliquam semper tincidunt, malesuada ultricies tristique pellentesque ut.
+        </Paragraph>
     </Column>
 </Row>
